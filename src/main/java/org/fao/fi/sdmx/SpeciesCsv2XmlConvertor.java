@@ -47,13 +47,10 @@ public class SpeciesCsv2XmlConvertor {
 					add2Codes(code.getDescriptions(), "fr", nextLine[4]);
 					add2Codes(code.getDescriptions(), "ru", nextLine[5]);
 					add2Codes(code.getDescriptions(), "es", nextLine[6]);
-
-					String latinName = nextLine[6];
-					if (StringUtils.isBlank(latinName)) {
-						latinName = "UNDEFINED";
+					add2Codes(code.getDescriptions(), "la", nextLine[6]);
+					if (code.getDescriptions().size() == 0) {
+						add2Codes(code.getDescriptions(), "la", "UNDEFINED");
 					}
-
-					add2Codes(code.getDescriptions(), "la", latinName);
 					cl.getCodes().add(code);
 				}
 			}
