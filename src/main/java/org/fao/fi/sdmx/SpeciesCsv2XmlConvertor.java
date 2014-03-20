@@ -21,8 +21,8 @@ import au.com.bytecode.opencsv.CSVReader;
 
 public class SpeciesCsv2XmlConvertor {
 
-	public static String csvFileName = "src/main/resources/CL_SPECIES.csv";
-	public static String xmlFileName = "src/main/resources/CL_SPECIES.xml";
+	public static String csvFileName = "src/main/resources/CL_SPECIES_1_2.csv";
+	public static String xmlFileName = "src/main/resources/CL_SPECIES_1_2.xml";
 
 	public static String NAME = "CL_SPECIES";
 

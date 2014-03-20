@@ -18,7 +18,56 @@
 	</repositories>
 
 	<dependencies>
-
+	<dependency>
+			<groupId>org.sdmxsource</groupId>
+			<artifactId>SdmxApi</artifactId>
+			<version>1.1.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.sdmxsource</groupId>
+			<artifactId>SdmxApi</artifactId>
+			<version>1.1.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.sdmxsource</groupId>
+			<artifactId>SdmxBeans</artifactId>
+			<version>1.1.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.sdmxsource</groupId>
+			<artifactId>SdmxEdiParser</artifactId>
+			<version>1.1.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.sdmxsource</groupId>
+			<artifactId>SdmxStructureParser</artifactId>
+			<version>1.1.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.sdmxsource</groupId>
+			<artifactId>SdmxDataParser</artifactId>
+			<version>1.1.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.sdmxsource</groupId>
+			<artifactId>SdmxStructureRetrieval</artifactId>
+			<version>1.1.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.sdmxsource</groupId>
+			<artifactId>SdmxSourceUtil</artifactId>
+			<version>1.1.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.sdmxsource</groupId>
+			<artifactId>SdmxFileQueryProcessor</artifactId>
+			<version>1.1.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.sdmxsource</groupId>
+			<artifactId>SdmxQueryBuilder</artifactId>
+			<version>1.1.4</version>
+		</dependency>
 		<dependency>
 			<groupId>org.opensdmx</groupId>
 			<artifactId>opensdmx-domain-20</artifactId>
