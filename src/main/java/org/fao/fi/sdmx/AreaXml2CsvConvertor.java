@@ -18,8 +18,8 @@ import au.com.bytecode.opencsv.CSVWriter;
 
 public class AreaXml2CsvConvertor {
 
-	public static final String xmlFileName = "src/main/resources/CL_PRODUCTION_AREA.xml";
-	public static final String csvFileName = "src/main/resources/CL_PRODUCTION_AREA.csv";
+	public static final String xmlFileName = "src/main/resources/CL_PRODUCTION_AREA_1_1.xml";
+	public static final String csvFileName = "src/main/resources/CL_PRODUCTION_AREA_1_1.csv";
 
 	void process() {
 		try {
