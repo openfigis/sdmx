@@ -41,13 +41,13 @@ public class SpeciesCsv2XmlConvertor {
 				String codeValue = nextLine[0];
 				if (!StringUtils.isBlank(codeValue)) {
 					code.setValue(codeValue);
-					add2Codes(code.getDescriptions(), "ar", nextLine[1]);
-					add2Codes(code.getDescriptions(), "ca", nextLine[2]);
-					add2Codes(code.getDescriptions(), "en", nextLine[3]);
-					add2Codes(code.getDescriptions(), "fr", nextLine[4]);
-					add2Codes(code.getDescriptions(), "ru", nextLine[5]);
-					add2Codes(code.getDescriptions(), "es", nextLine[6]);
-					add2Codes(code.getDescriptions(), "la", nextLine[6]);
+					// add2Codes(code.getDescriptions(), "ar", nextLine[1]);
+					// add2Codes(code.getDescriptions(), "ca", nextLine[2]);
+					add2Codes(code.getDescriptions(), "en", nextLine[1]);
+					add2Codes(code.getDescriptions(), "fr", nextLine[2]);
+					// add2Codes(code.getDescriptions(), "ru", nextLine[3]);
+					add2Codes(code.getDescriptions(), "es", nextLine[4]);
+					add2Codes(code.getDescriptions(), "la", nextLine[5]);
 					if (code.getDescriptions().size() == 0) {
 						add2Codes(code.getDescriptions(), "la", "UNDEFINED");
 					}
