@@ -19,6 +19,42 @@ import org.sdmx.resources.sdmxml.schemas.v2_0.structure.CodeType;
 
 import au.com.bytecode.opencsv.CSVReader;
 
+/**
+ * 
+ * TODO, make this work. I started this one because of the email below. Then
+ * Friderike and I spoke on the telephone and it we clarified that this one is
+ * needed for next year.
+ * 
+ * 
+ * 
+ * Thanks Erik, however it is not an issue of a wrong link, but the list does
+ * not seem to contain the 2014 AFSIS updates. I will give you a call at 3.
+ * 
+ * From: VanIngen, Erik (FIPS) [mailto:Erik.VanIngen@fao.org] Sent: Monday, May
+ * 19, 2014 1:53 PM To: OEHLER Friderike (ESTAT) Subject: RE: SDMX codelist
+ * 
+ * They have been moved here last week: ftp://ftp.fao.org/fi/STAT/CodeList/2014/
+ * 
+ * I am available from 15:00 – 16:00 to discuss more.
+ * 
+ * 
+ * 
+ * 
+ * From: Friderike.OEHLER@ec.europa.eu [mailto:Friderike.OEHLER@ec.europa.eu]
+ * Sent: 19 May 2014 11:24 To: VanIngen, Erik (FIPS) Subject: RE: SDMX codelist
+ * 
+ * All right. I would need to know how long a possible update will take.
+ * Countries are getting impatient to receive the templates… Thanks a lot,
+ * Friderike
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * @author Erik van Ingen
+ * 
+ */
 public class SpeciesCsv2XmlConvertor2014Second {
 
 	public static String csvFileName = "src/main/resources/CL_SPECIES_1_3.csv";
@@ -26,7 +62,29 @@ public class SpeciesCsv2XmlConvertor2014Second {
 
 	public static String NAME = "CL_SPECIES";
 
-	// ALPHA3CODE NAME_A NAME_C NAME_E NAME_F NAME_R NAME_S AUTHOR
+	/**
+	 * 0 ISSCAAP
+	 * 
+	 * 1 TAXOCODE
+	 * 
+	 * 2 3A_CODE
+	 * 
+	 * 3 Scientific_name
+	 * 
+	 * 4 English_name
+	 * 
+	 * 5 French_name
+	 * 
+	 * *6 Spanish_name
+	 * 
+	 * 7 Author
+	 * 
+	 * 8 Family
+	 * 
+	 * 9 Order
+	 * 
+	 * 10 Stats_data
+	 */
 
 	void process() {
 
@@ -38,16 +96,16 @@ public class SpeciesCsv2XmlConvertor2014Second {
 			CodeListType cl = new CodeListType();
 			while ((nextLine = reader.readNext()) != null) {
 				CodeType code = new CodeType();
-				String codeValue = nextLine[0];
+				String codeValue = nextLine[2];
 				if (!StringUtils.isBlank(codeValue)) {
 					code.setValue(codeValue);
 					// add2Codes(code.getDescriptions(), "ar", nextLine[1]);
 					// add2Codes(code.getDescriptions(), "ca", nextLine[2]);
-					add2Codes(code.getDescriptions(), "en", nextLine[1]);
-					add2Codes(code.getDescriptions(), "fr", nextLine[2]);
+					add2Codes(code.getDescriptions(), "en", nextLine[4]);
+					add2Codes(code.getDescriptions(), "fr", nextLine[5]);
 					// add2Codes(code.getDescriptions(), "ru", nextLine[3]);
-					add2Codes(code.getDescriptions(), "es", nextLine[4]);
-					add2Codes(code.getDescriptions(), "la", nextLine[5]);
+					add2Codes(code.getDescriptions(), "es", nextLine[6]);
+					add2Codes(code.getDescriptions(), "la", nextLine[3]);
 					if (code.getDescriptions().size() == 0) {
 						add2Codes(code.getDescriptions(), "la", "UNDEFINED");
 					}
