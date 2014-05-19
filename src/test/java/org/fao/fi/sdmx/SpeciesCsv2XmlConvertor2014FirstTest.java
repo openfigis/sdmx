@@ -6,14 +6,14 @@ import java.io.File;
 
 import org.junit.Test;
 
-public class SpeciesCsv2XmlConvertorTest {
+public class SpeciesCsv2XmlConvertor2014FirstTest {
 
-	SpeciesCsv2XmlConvertor c = new SpeciesCsv2XmlConvertor();
+	SpeciesCsv2XmlConvertor2014First c = new SpeciesCsv2XmlConvertor2014First();
 
 	@Test
 	public void testProcess() {
 		c.process();
-		File xmlFile = new File(SpeciesCsv2XmlConvertor.xmlFileName);
+		File xmlFile = new File(SpeciesCsv2XmlConvertor2014First.xmlFileName);
 		assertTrue(xmlFile.exists());
 	}
 

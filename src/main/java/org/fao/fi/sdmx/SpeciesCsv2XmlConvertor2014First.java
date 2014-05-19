@@ -19,7 +19,7 @@ import org.sdmx.resources.sdmxml.schemas.v2_0.structure.CodeType;
 
 import au.com.bytecode.opencsv.CSVReader;
 
-public class SpeciesCsv2XmlConvertor {
+public class SpeciesCsv2XmlConvertor2014First {
 
 	public static String csvFileName = "src/main/resources/CL_SPECIES_1_2.csv";
 	public static String xmlFileName = "src/main/resources/CL_SPECIES_1_2.xml";
