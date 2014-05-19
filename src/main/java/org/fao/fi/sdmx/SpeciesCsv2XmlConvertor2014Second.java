@@ -21,6 +21,9 @@ import au.com.bytecode.opencsv.CSVReader;
 
 /**
  * 
+ * ftp://ftp.fao.org/fi/STAT/CodeList/
+ * 
+ * 
  * TODO, make this work. I started this one because of the email below. Then
  * Friderike and I spoke on the telephone and it we clarified that this one is
  * needed for next year.
