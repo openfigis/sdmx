@@ -1,7 +1,8 @@
 package org.fao.fi.sdmx;
 
 import java.io.File;
-import java.io.FileReader;
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
 import java.util.List;
 
 import javax.xml.bind.JAXBContext;
@@ -92,7 +93,9 @@ public class SpeciesCsv2XmlConvertor2014Second {
 	void process() {
 
 		try {
-			CSVReader reader = new CSVReader(new FileReader(csvFileName), '\t');
+
+			CSVReader reader = new CSVReader(new InputStreamReader(new FileInputStream(csvFileName), "Windows-1252"),
+					'\t');
 			reader.readNext();
 			String[] nextLine;
 			CodeListType cl = new CodeListType();
@@ -104,7 +107,10 @@ public class SpeciesCsv2XmlConvertor2014Second {
 					// add2Codes(code.getDescriptions(), "ar", nextLine[1]);
 					// add2Codes(code.getDescriptions(), "ca", nextLine[2]);
 					add2Codes(code.getDescriptions(), "en", nextLine[4]);
+
 					add2Codes(code.getDescriptions(), "fr", nextLine[5]);
+					System.out.println(nextLine[5]);
+
 					// add2Codes(code.getDescriptions(), "ru", nextLine[3]);
 					add2Codes(code.getDescriptions(), "es", nextLine[6]);
 					add2Codes(code.getDescriptions(), "la", nextLine[3]);
