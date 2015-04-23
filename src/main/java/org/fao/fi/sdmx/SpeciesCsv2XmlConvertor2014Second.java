@@ -24,17 +24,16 @@ import au.com.bytecode.opencsv.CSVReader;
  * ftp://ftp.fao.org/fi/STAT/CodeList/
  * 
  * 
- * TODO, make this work. I started this one because of the email below. Then
- * Friderike and I spoke on the telephone and it we clarified that this one is
- * needed for next year.
+ * TODO, make this work. I started this one because of the email below. Then Friderike and I spoke on the telephone and
+ * it we clarified that this one is needed for next year.
  * 
  * 
  * 
- * Thanks Erik, however it is not an issue of a wrong link, but the list does
- * not seem to contain the 2014 AFSIS updates. I will give you a call at 3.
+ * Thanks Erik, however it is not an issue of a wrong link, but the list does not seem to contain the 2014 AFSIS
+ * updates. I will give you a call at 3.
  * 
- * From: VanIngen, Erik (FIPS) [mailto:Erik.VanIngen@fao.org] Sent: Monday, May
- * 19, 2014 1:53 PM To: OEHLER Friderike (ESTAT) Subject: RE: SDMX codelist
+ * From: VanIngen, Erik (FIPS) [mailto:Erik.VanIngen@fao.org] Sent: Monday, May 19, 2014 1:53 PM To: OEHLER Friderike
+ * (ESTAT) Subject: RE: SDMX codelist
  * 
  * They have been moved here last week: ftp://ftp.fao.org/fi/STAT/CodeList/2014/
  * 
@@ -43,12 +42,11 @@ import au.com.bytecode.opencsv.CSVReader;
  * 
  * 
  * 
- * From: Friderike.OEHLER@ec.europa.eu [mailto:Friderike.OEHLER@ec.europa.eu]
- * Sent: 19 May 2014 11:24 To: VanIngen, Erik (FIPS) Subject: RE: SDMX codelist
+ * From: Friderike.OEHLER@ec.europa.eu [mailto:Friderike.OEHLER@ec.europa.eu] Sent: 19 May 2014 11:24 To: VanIngen, Erik
+ * (FIPS) Subject: RE: SDMX codelist
  * 
- * All right. I would need to know how long a possible update will take.
- * Countries are getting impatient to receive the templates… Thanks a lot,
- * Friderike
+ * All right. I would need to know how long a possible update will take. Countries are getting impatient to receive the
+ * templates… Thanks a lot, Friderike
  * 
  * 
  * 
@@ -66,6 +64,8 @@ public class SpeciesCsv2XmlConvertor2014Second {
 	public static String NAME = "CL_SPECIES";
 
 	/**
+	 * 
+	 * 
 	 * 0 ISSCAAP
 	 * 
 	 * 1 TAXOCODE
@@ -92,8 +92,7 @@ public class SpeciesCsv2XmlConvertor2014Second {
 	void process() {
 
 		try {
-
-			CSVReader reader = new CSVReader(new FileReader(csvFileName));
+			CSVReader reader = new CSVReader(new FileReader(csvFileName), '\t');
 			reader.readNext();
 			String[] nextLine;
 			CodeListType cl = new CodeListType();
