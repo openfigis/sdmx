@@ -60,7 +60,7 @@ import au.com.bytecode.opencsv.CSVReader;
 public class SpeciesCsv2XmlConvertor2015 {
 
 	/**
-	 * CL_SPECIES_1_4.csv
+	 * Renamed ASFIS_sp_Feb_2015.txt to CL_SPECIES_1_4.csv
 	 */
 	public static String csvFileName = "src/main/resources/CL_SPECIES_1_4.csv";
 	public static String xmlFileName = "src/main/resources/CL_SPECIES_1_4.xml";
